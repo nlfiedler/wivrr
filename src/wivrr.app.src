@@ -1,0 +1,10 @@
+{application, wivrr, [
+    {description, "Rebar3 plugin to generate a Version file."},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {env, []}
+]}.

@@ -1,0 +1,7 @@
+*.beam
+*.o
+*.plt
+.eunit
+_build
+erl_crash.dump
+rebar.lock
