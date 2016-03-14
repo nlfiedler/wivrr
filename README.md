@@ -20,7 +20,15 @@ Then, invoke the `mkversion` command via rebar:
 $ rebar mkversion
 ```
 
-There will be a file named `Version` in `_build/default/lib/your-app`. To include this file as part of the release when running `rebar release`, use an overlay, like so.
+There will be a file named `Version` in `_build/default/lib/your-app`.
+
+A more convenient means of running the `mkversion` is to use a provider hook. For example, to have the file generated when a release is built, add the following to your `rebar.config` file.
+
+```
+{provider_hooks, [{pre, [{release, mkversion}]}]}.
+```
+
+However, the file will not be in the release directory, so to include it in the release when running `rebar release`, use an overlay, like so.
 
 ```
 {relx, [
