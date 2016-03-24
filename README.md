@@ -41,6 +41,18 @@ However, the file will not be in the release directory, so to include it in the 
 ]}.
 ```
 
+## Development and Testing
+
+Use the rebar3 [checkouts](http://blog.erlware.org/rebar3-features-part-6-_checkouts-2/
+) feature to make developing and testing the plugin much easier. An abbreviated recipe is outlined below.
+
+1. Add the plugin to the project in question (e.g. [kitsune](https://github.com/nlfiedler/kitsune))
+1. Make a directory at the root of the project named `_checkouts`
+1. Make a symlink to the original `wivrr` clone in `_checkouts`
+1. Edit the wivrr source code as needed
+1. Run the `rebar3 mkversion` command to test
+1. Repeat those two previous steps as often as needed
+
 ## About the Name
 
-It is an amusing misspelling by a kindergartner.
+It is an amusing misspelling by a certain former kindergartner.

@@ -54,7 +54,7 @@ format_error(Reason) ->
 check_git_status(App) ->
     case os:cmd("git status --porcelain") of
         [] -> generate_version(App);
-        _ ->  rebar_api:abort("Git working tree is not clean!", [])
+        _ ->  rebar_api:abort("mkversion: git working tree must be clean!", [])
     end.
 
 % Generate the Version file so it contains the current date/time and the
